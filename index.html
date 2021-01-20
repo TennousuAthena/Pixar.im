@@ -3,18 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pixar Chat</title>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link href="https://fonts.loli.net/css?family=Press+Start+2P" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nes.css@2.3.0/css/nes.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/css/main.css">
 </head>
 <body>
-    <p class="nes-balloon from-left nes-pointer">
-        Pixar Chat: Coming Soon 
-        <progress class="nes-progress is-pattern" value="30" max="100"></progress>
-    </p>
+<body>
+  <nav style="padding: 20px; border-bottom: 3px solid #ccc; margin-bottom: 60px;">
+    <div class="container">
+      <h2 style="margin-bottom: 0;">
+        <i class="nes-icon coin is-medium"></i>
+        Pixar Chat 
+      </h2>
+    </div>
+  </nav>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+  <div class="container" style="margin-bottom: 50px;">
+    <div class="nes-container with-title is-centered is-rounded">
+        <p class="title">Pixar</p>
+        <p><span id="greeting">Hello</span> my friend. Would you like to try Pixar for old time`s sake?</p>
+        <label>
+            <input type="radio" class="nes-radio" name="answer" checked onclick="document.getElementById('dialog-default').showModal();" />
+            <span>Yes</span>
+          </label>
+        <label>
+            <input type="radio" class="nes-radio" name="answer" />
+            <span>No</span>
+        </label>
+      </div>
+      <section>
+        <dialog class="nes-dialog" id="dialog-default">
+          <form method="dialog">
+            <p class="title">Notice</p>
+            <p>Download is temporary not available, please wait for a while.</p>
+            <menu class="dialog-menu">
+              <button class="nes-btn">Cancel</button>
+              <button class="nes-btn is-primary">Got it</button>
+            </menu>
+          </form>
+        </dialog>
+      </section>
+  </div>
+  <div class="container">
+    <div class="row">
+      <!-- left -->
+      <div class="col-md-4 col-sm-12 col-xs-12">
+        <div class="nes-container with-title">
+          <h3 class="title">Feature</h3>
+          <div>
+            <div class="lists">
+              <ul class="nes-list is-circle" style="margin-bottom: 0;">
+                <li>Fast</li>
+                <li>Cross-Platform</li>
+                <li>Graceful</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+     <!-- right      -->
+      <div class="col-md-8 col-sm-12 col-xs-12">
+        <div class="nes-container with-title">
+          <h3 class="title">Hey</h3>
+
+          <div class="row">
+              <div class="col-sm-6 col-xs-12">Coming Soon..</div>
+
+          </div>
+
+          <div class="row">
+            <div class="col-sm-8 col-xs-12">
+            <progress class="nes-progress is-pattern" value="15" max="100"></progress>
+            </div>
+        </div>
+
+        </div>
+
+        
+      </div>
+    </div>
+  </div>
+  <div class="container" style="margin-top: 50px; font-size: 90%;">
+    <div class="row">
+      <div class="col-xs-12" style="text-align: center; color: #00ad00;">
+        Copyright &copy 2021 <a href="/">Pixar.im</a> Made with <i class="nes-icon is-small heart" style="height: 16px;"></i> & NES.css
+      </div>
+    </div>
+  </div>
+
+    <script>
+            var now = new Date();
+            var times = now.getHours();
+            var whe=parseInt(times);
+            function greating() {  
+                if(times>=6 && times<12){return "Good morning"}
+                if(times>=12 && times<17){return "Good afternoon"}
+                if(times>=17 && times<24 || times>=0 && times<6){return "Good evening"}
+            }
+            document.getElementById('greeting').textContent = greating();
+    </script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script> -->
 </body>
 </html>

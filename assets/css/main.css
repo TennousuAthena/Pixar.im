@@ -1,8 +1,16 @@
-@font-face {
+/* @font-face {
     font-family: "Zpix";
     src: url("../fonts/zpix.woff2");
-}
+} */
 
 html, body, pre, code, kbd, samp {
-    font-family: "Zpix" !important;
+    /* font-family: "Zpix" !important; */
+    font-family: 'Press Start 2P', cursive;
+}
+
+body {
+    padding-bottom: 90px;
+}
+.nes-progress {
+    height: 25px;
 }
